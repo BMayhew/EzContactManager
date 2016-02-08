@@ -1,0 +1,31 @@
+<h1>Welcome to the EZ Contact Magnager</h1>
+<br/>
+<p>	
+<%= image_tag "main_image.jpg", :style => "float:left;padding:0 10px 10px 3px;" %>With all the contact management systems out today, EZ Contact Manager stands alone in simplicity.  We offer an easy-to-learn and intuitive interface at no cost.	
+</p>
+<p>
+To get started, simply click on <a href="javascript:alert('LINK TO MY CONTACTS HERE');">My Contacts</a> and add a new contact.  We track phone numbers, addresses, and names!
+</p>
+<p>
+If you have any questions, feel free to emall us at <%= link_to "ezcontacter@gmail", "mailto:ezcontacter@gmail" %>.
+<p>
+<strong>Pricing</strong>
+We offer a variety of pricing to fit just about any budget.  Below is our price chart:
+<table style="padding:10px">
+	<tr>
+		<th>Tier 1</th>
+		<th>Tier 2</th>
+		<th>Tier 3</th>
+	</tr>
+	<tr>
+		<td><%= Price.new.getTier1 %></td>
+		<td><%= Price.new.getTier2 %></td>
+		<td><%= Price.new.tier_3 %></td>
+		<td>Tier 4 coming soon</td>
+	</tr>
+</table>
+<% if current_user %>
+<div>
+	Currently signed in as <%= current_user.email %>
+</div>
+<% end %>
