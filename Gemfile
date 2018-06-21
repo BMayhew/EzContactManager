@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'jquery-rails'
 gem 'rake', '0.8.7'
+gem 'bcrypt', '3.1.10'
 
 gem "will_paginate", "~> 3.0.pre2"
 
