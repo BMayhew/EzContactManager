@@ -1,0 +1,27 @@
+# docker-compose.yml
+version: '3.7'
+services:
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    # entrypoint: ./docker-entrypoint.sh
+    volumes:
+      - .:/app
+      - bundler-data:/usr/local/bundle
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  db: 
+    image: postgres:9.6
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: password1234
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
+  bundler-data:

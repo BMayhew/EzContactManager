@@ -84,6 +84,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (= 3.1.10)
   devise
   jquery-rails
   rails (= 3.0.7)
@@ -92,4 +93,4 @@ DEPENDENCIES
   will_paginate (~> 3.0.pre2)
 
 BUNDLED WITH
-   1.11.2
+   1.17.3
