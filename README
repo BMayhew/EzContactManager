@@ -7,4 +7,6 @@ typos to XSS vulnerabilities.
 
 == Can EZ Contacter be used for developer tests as well?
 
-Yes, the code has been intentionally written in such a way that there are several areas that can be refactored.  
+Yes, the code has been intentionally written in such a way that there are several areas that can be refactored.
+
+To run this locally use the command `docker-compose up -d && docker-compose run web rake db:migrate`
