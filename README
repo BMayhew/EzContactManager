@@ -9,4 +9,14 @@ typos to XSS vulnerabilities.
 
 Yes, the code has been intentionally written in such a way that there are several areas that can be refactored.
 
-To run this locally use the command `docker-compose up -d && docker-compose run web rake db:migrate`
+To run this locally use the command `docker-compose up -d && docker-compose run web rake db:migrate`Yes, the code has been intentionally written in such a way that there are several areas that can be refactored.  
+
+== Running in the Cloud ==
+
+Create a linux server
+Install Docker (ex: snap install docker) 
+Install git if needed (ex: sudo apt install git)
+git clone repository
+From main directory start docker: docker-compose up -d && docker-compose run web rake db:migrate
+Setup service to automatically restart upon reboot: Ubuntu (run: crontab -e)
+Add '@reboot /path/to/script' to the file and save.
