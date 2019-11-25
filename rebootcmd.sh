@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compose up -d && docker-compose run web rake db:migrate
+cd /root/EzContactManager && docker-compose up -d && docker-compose run web rake db:migrate
