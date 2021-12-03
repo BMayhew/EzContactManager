@@ -1,8 +1,8 @@
 == What is EZ Contacter?
 
 EZ Contacter is a simple Rails website that is intentionally broken in several different places.  
-The reason it is broken is so that the site can be given as a test to interview candidates for 
-Quality Assurance positions.  Basically, it's a "find the bugs" site that has issues ranging from 
+The reason it is broken is so that the site can be given as a test to interview candidates for
+Quality Assurance positions.  Basically, it's a "find the bugs" site that has issues ranging from
 typos to XSS vulnerabilities.
 
 == Can EZ Contacter be used for developer tests as well?
@@ -13,10 +13,27 @@ To run this locally use the command `docker-compose up -d && docker-compose run 
 
 == Running in the Cloud ==
 
-Create a linux server
-Install Docker (ex: snap install docker) 
-Install git if needed (ex: sudo apt install git)
-git clone repository
-From main directory start docker: docker-compose up -d && docker-compose run web rake db:migrate
-Setup service to automatically restart upon reboot: Ubuntu (run: crontab -e)
-Add '@reboot /path/to/script' to the file and save.
+* Create a linux server
+* SSH into the box
+* Install Docker
+
+`snap install docker`
+
+* Install git if needed
+
+`sudo apt install git`
+
+* Clone Repository
+
+`git clone https://github.com/BMayhew/EzContactManager.git`
+`cd EzContactManager`
+
+* Run Docker Compose
+
+`docker-compose up -d && docker-compose run web rake db:migrate`
+
+* Extra: Setup service to automatically restart upon reboot: Ubuntu
+
+`crontab -e`
+
+Add '@reboot /path/to/script' to the file and save\
